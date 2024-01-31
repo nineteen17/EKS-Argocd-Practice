@@ -5,8 +5,7 @@ metadata:
   namespace: my-app
 spec:
   rules:
-    - host: myapp.xip.io # Use the subdomain you selected
-      http:
+    - http:
         paths:
           - path: /
             pathType: Prefix
@@ -15,5 +14,3 @@ spec:
                 name: my-custom-container
                 port:
                   number: 80
-
-
