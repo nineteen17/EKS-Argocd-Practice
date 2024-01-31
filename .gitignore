@@ -34,3 +34,7 @@ override.tf.json
 terraform.rc
 commands.txt
 get_helm.sh
+
+ssh-secret.yaml
+environments/ssh-secret.yaml
+Dockerfile

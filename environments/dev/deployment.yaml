@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-custom-container
+  namespace: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: my-container
+          imagePullPolicy: Always
+          image: nineteen17dh/my-app:latest
+          ports:
+            - containerPort: 80
