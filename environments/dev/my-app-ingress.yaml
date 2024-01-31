@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: my-app-ingress
   namespace: my-app
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
     - http:
@@ -11,6 +13,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: my-custom-container
+                name: my-custom-service
                 port:
                   number: 80
+
