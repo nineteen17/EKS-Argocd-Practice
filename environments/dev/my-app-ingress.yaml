@@ -3,17 +3,14 @@ kind: Ingress
 metadata:
   name: my-app-ingress
   namespace: my-app
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-    - http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: my-custom-service
-                port:
-                  number: 80
-
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: my-custom-service  # Ensure this is the correct Service name
+            port:
+              number: 80
